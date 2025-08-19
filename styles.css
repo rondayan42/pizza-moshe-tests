@@ -28,6 +28,56 @@ body {
     overflow-x: hidden;
 }
 
+/* Subtle CRT scan lines effect for the whole website */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 1px,
+        rgba(0, 0, 0, 0.08) 1px,
+        rgba(0, 0, 0, 0.08) 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(2px); }
+}
+
+/* Additional more visible scan lines */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 0, 0, 0.15) 3px,
+        rgba(0, 0, 0, 0.15) 4px
+    );
+    pointer-events: none;
+    z-index: 9998;
+    animation: scanlines2 12s linear infinite;
+}
+
+@keyframes scanlines2 {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -104,7 +154,11 @@ body {
 .nav-links a {
     color: var(--text-white);
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     transition: all 0.3s ease;
     position: relative;
 }
@@ -301,6 +355,8 @@ body {
     overflow: hidden;
     border: 3px solid var(--neon-orange);
     box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
+    animation: glitch-box 6s infinite;
+    isolation: isolate;
 }
 
 .chef-image {
@@ -308,28 +364,106 @@ body {
     height: 100%;
     object-fit: cover;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 0;
 }
 
-.chef-image-container:hover .chef-image {
-    transform: scale(1.05);
-}
-
-.chef-image-container::before {
-    content: '';
+/* Glitch layers cloned from the title approach */
+.chef-image-glitch {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent 30%, rgba(0, 191, 255, 0.1) 50%, transparent 70%);
-    animation: scanEffect 3s linear infinite;
+    object-fit: cover;
+    opacity: 0;
+    mix-blend-mode: screen;
     pointer-events: none;
+    will-change: transform, clip-path, opacity;
 }
 
-@keyframes scanEffect {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+.chef-image-glitch--blue {
+    animation: imgGlitchSlice1 4.8s steps(12, end) infinite 0.15s;
+    filter: hue-rotate(190deg) saturate(1.15);
+    z-index: 1;
 }
+
+.chef-image-glitch--teal {
+    animation: imgGlitchSlice2 6s steps(14, end) infinite 0.35s;
+    filter: hue-rotate(140deg) saturate(1.15);
+    z-index: 1;
+}
+
+/* Stronger image glitch slices */
+@keyframes imgGlitchSlice1 {
+    0%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+    /* burst 1 */
+    6% { opacity: 1; transform: translate(-8px, -2px); clip-path: inset(0 0 84% 0); }
+    8% { transform: translate(8px, 2px); clip-path: inset(12% 0 60% 0); }
+    10% { transform: translate(-5px, 0); clip-path: inset(28% 0 44% 0); }
+    12% { transform: translate(8px, -1px); clip-path: inset(46% 0 30% 0); }
+    14% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+    /* burst 2 */
+    30% { opacity: 1; transform: translate(7px, -3px); clip-path: inset(10% 0 70% 0); }
+    32% { transform: translate(-6px, 3px); clip-path: inset(34% 0 44% 0); }
+    34% { transform: translate(5px, -1px); clip-path: inset(58% 0 18% 0); }
+    36% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+    /* burst 3 */
+    58% { opacity: 1; transform: translate(-9px, 1px); clip-path: inset(4% 0 80% 0); }
+    60% { transform: translate(9px, -2px); clip-path: inset(40% 0 40% 0); }
+    62% { transform: translate(-6px, 2px); clip-path: inset(74% 0 10% 0); }
+    64% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+    /* burst 4 */
+    80% { opacity: 1; transform: translate(6px, 0); clip-path: inset(20% 0 60% 0); }
+    82% { transform: translate(-7px, 1px); clip-path: inset(44% 0 36% 0); }
+    84% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+}
+
+@keyframes imgGlitchSlice2 {
+    0%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+    /* burst 1 */
+    5% { opacity: 1; transform: translate(7px, 3px); clip-path: inset(8% 0 72% 0); }
+    7% { transform: translate(-9px, -2px); clip-path: inset(26% 0 50% 0); }
+    9% { transform: translate(6px, 1px); clip-path: inset(42% 0 34% 0); }
+    11% { transform: translate(-10px, 0); clip-path: inset(60% 0 18% 0); }
+    13% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+    /* burst 2 */
+    28% { opacity: 1; transform: translate(-8px, 2px); clip-path: inset(12% 0 66% 0); }
+    30% { transform: translate(9px, -3px); clip-path: inset(36% 0 42% 0); }
+    32% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+    /* burst 3 */
+    56% { opacity: 1; transform: translate(8px, -1px); clip-path: inset(22% 0 56% 0); }
+    58% { transform: translate(-8px, 2px); clip-path: inset(48% 0 30% 0); }
+    60% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+    /* burst 4 */
+    78% { opacity: 1; transform: translate(-7px, 0); clip-path: inset(6% 0 78% 0); }
+    80% { transform: translate(7px, -1px); clip-path: inset(70% 0 10% 0); }
+    82% { opacity: 0; transform: translate(0); clip-path: inset(0 0 0 0); }
+}
+
+/* container jitter stronger than text */
+@keyframes glitch-box {
+    0%, 100% { transform: translate(0); }
+    8% { transform: translate(-3px, 2px); }
+    16% { transform: translate(3px, -3px); }
+    24% { transform: translate(-2px, -1px); }
+    32% { transform: translate(4px, 2px); }
+    40% { transform: translate(-3px, 3px); }
+    48% { transform: translate(2px, -2px); }
+    56% { transform: translate(-4px, 1px); }
+    64% { transform: translate(3px, 0); }
+    72% { transform: translate(-2px, -3px); }
+    80% { transform: translate(4px, -1px); }
+    88% { transform: translate(-3px, 2px); }
+}
+
+/* remove pseudo-element overlay glitch; use real image layers instead */
+
+.chef-image-container:hover .chef-image {
+    transform: scale(1.05);
+}
+
+
 
 /* Message Section */
 .message-section {
