@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Moshe Yavne - The Most Advanced Pizza In The World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-text">PIZZA MOSHE</div>
+                <div class="logo-subtitle">YAVNE</div>
+                <div class="logo-tagline">THE MOST ADVANCED PIZZA IN THE WORLD</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#delivery">Delivery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="glitch" data-text="PIZZA MOSHE">PIZZA MOSHE</span>
+                <span class="hero-subtitle">YAVNE</span>
+            </h1>
+            <p class="hero-tagline">The Most Advanced Pizza In The World</p>
+            <p class="hero-description">
+                In a world of corporate chains and soulless food, we stand for something different. 
+                Real ingredients. Real people. Real rebellion against the system.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#delivery" class="btn btn-secondary">Delivery Info</a>
+                <a href="#order" class="btn btn-accent">Order Now</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="chef-image-container">
+                <img src="assets/20250715_1931_Cyberpunk Pizzeria Chef_remix_01k07em0d8fza86xs4s2sv2vm7.png" alt="Subnet the Chef - Pizza Moshe Yavne" class="chef-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Anti-Establishment Message -->
+    <section class="message-section">
+        <div class="container">
+            <div class="message-content">
+                <h2>Down With The System</h2>
+                <p>We're not just making pizza - we're fighting corporate food with real ingredients, human connection, and a dash of rebellion. Join the revolution, one slice at a time.</p>
+                <div class="message-visual">
+                    <img src="assets/20250819_2302_Cyberpunk Pizza Chef_remix_01k31ynbxbebf83e0h59t7rt94.png" alt="Cyberpunk Chef in Action" class="message-chef-image">
+                </div>
+                <div class="message-icons">
+                    <div class="icon-item">
+                        <i class="fas fa-users"></i>
+                        <span>For The People</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>Real Ingredients</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Made With Love</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>Fast Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">The Menu</h2>
+            <p class="section-subtitle">No corporate recipes. Just good food.</p>
+            
+            <!-- Menu Categories -->
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="pizzas">Pizzas</button>
+                <button class="category-btn" data-category="sides">Sides</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+            </div>
+            
+            <!-- Pizzas Category -->
+            <div class="menu-category active" id="pizzas">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Popular</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Classic Margherita</h3>
+                            <p>Fresh mozzarella, basil, and our secret sauce. Simple. Perfect. Real.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Mozzarella, Basil, Tomato Sauce</span>
+                                <span class="spice-level">🌶️ Mild</span>
+                            </div>
+                            <div class="price">₪45</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Spicy</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Pepperoni Rebellion</h3>
+                            <p>Spicy pepperoni, mozzarella, and a middle finger to bland corporate pizza.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Pepperoni, Mozzarella, Spicy Sauce</span>
+                                <span class="spice-level">🌶️🌶️🌶️ Hot</span>
+                            </div>
+                            <div class="price">₪52</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Vegan</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Veggie Liberation</h3>
+                            <p>Fresh vegetables, no artificial preservatives, and maximum flavor.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Bell Peppers, Mushrooms, Onions, Olives</span>
+                                <span class="spice-level">🌶️ Mild</span>
+                            </div>
+                            <div class="price">₪48</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Premium</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Supreme Resistance</h3>
+                            <p>Everything on it. Because sometimes you need to go all out.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Pepperoni, Sausage, Mushrooms, Peppers, Onions, Olives</span>
+                                <span class="spice-level">🌶️🌶️ Medium</span>
+                            </div>
+                            <div class="price">₪65</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">New</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>BBQ Chicken Uprising</h3>
+                            <p>Grilled chicken, red onions, and our homemade BBQ sauce.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Chicken, Red Onions, BBQ Sauce, Mozzarella</span>
+                                <span class="spice-level">🌶️🌶️ Medium</span>
+                            </div>
+                            <div class="price">₪58</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Chef's Choice</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Mediterranean Dream</h3>
+                            <p>Feta cheese, sun-dried tomatoes, artichokes, and kalamata olives.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Feta, Sun-dried Tomatoes, Artichokes, Kalamata Olives</span>
+                                <span class="spice-level">🌶️ Mild</span>
+                            </div>
+                            <div class="price">₪55</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sides Category -->
+            <div class="menu-category" id="sides">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Garlic Bread Revolution</h3>
+                            <p>Fresh baked bread with garlic butter and herbs.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Bread, Garlic, Butter, Herbs</span>
+                            </div>
+                            <div class="price">₪18</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Buffalo Wings Resistance</h3>
+                            <p>Spicy wings with blue cheese dip and celery sticks.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Chicken Wings, Buffalo Sauce, Blue Cheese</span>
+                                <span class="spice-level">🌶️🌶️🌶️ Hot</span>
+                            </div>
+                            <div class="price">₪32</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Caesar Salad Uprising</h3>
+                            <p>Fresh romaine lettuce, parmesan, croutons, and caesar dressing.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Romaine, Parmesan, Croutons, Caesar Dressing</span>
+                            </div>
+                            <div class="price">₪28</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Drinks Category -->
+            <div class="menu-category" id="drinks">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Cyber Cola</h3>
+                            <p>Our signature cola with a neon twist.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Cola, Neon Syrup</span>
+                            </div>
+                            <div class="price">₪12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Neon Lemonade</h3>
+                            <p>Fresh squeezed lemonade with glowing properties.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Fresh Lemons, Sugar, Neon Dye</span>
+                            </div>
+                            <div class="price">₪15</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Quantum Water</h3>
+                            <p>Purified water from the future.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">H2O, Quantum Particles</span>
+                            </div>
+                            <div class="price">₪8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desserts Category -->
+            <div class="menu-category" id="desserts">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Chocolate Lava Cake</h3>
+                            <p>Warm chocolate cake with molten center and vanilla ice cream.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Chocolate, Flour, Eggs, Vanilla Ice Cream</span>
+                            </div>
+                            <div class="price">₪22</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Tiramisu Rebellion</h3>
+                            <p>Classic Italian dessert with a cyberpunk twist.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Mascarpone, Coffee, Ladyfingers, Cocoa</span>
+                            </div>
+                            <div class="price">₪25</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Services Section -->
+    <section id="delivery" class="delivery-section">
+        <div class="container">
+            <h2 class="section-title">Delivery Services</h2>
+            <p class="section-subtitle">Fighting corporate delivery fees, one order at a time.</p>
+            
+            <div class="delivery-options">
+                <div class="delivery-option">
+                    <div class="delivery-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>Standard Delivery</h3>
+                    <p class="delivery-time">30-45 minutes</p>
+                    <p class="delivery-fee">₪8 delivery fee</p>
+                    <p class="delivery-description">Our cyberpunk riders will deliver your pizza with style.</p>
+                    <div class="delivery-features">
+                        <span><i class="fas fa-check"></i> Real-time tracking</span>
+                        <span><i class="fas fa-check"></i> Contactless delivery</span>
+                        <span><i class="fas fa-check"></i> Eco-friendly packaging</span>
+                    </div>
+                </div>
+                
+                <div class="delivery-option featured">
+                    <div class="delivery-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="featured-badge">Most Popular</div>
+                    <h3>Express Delivery</h3>
+                    <p class="delivery-time">15-25 minutes</p>
+                    <p class="delivery-fee">₪12 delivery fee</p>
+                    <p class="delivery-description">Lightning-fast delivery for when you need pizza NOW.</p>
+                    <div class="delivery-features">
+                        <span><i class="fas fa-check"></i> Priority preparation</span>
+                        <span><i class="fas fa-check"></i> Dedicated rider</span>
+                        <span><i class="fas fa-check"></i> Guaranteed timing</span>
+                    </div>
+                </div>
+                
+                <div class="delivery-option">
+                    <div class="delivery-icon">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <h3>Eco Delivery</h3>
+                    <p class="delivery-time">40-55 minutes</p>
+                    <p class="delivery-fee">₪5 delivery fee</p>
+                    <p class="delivery-description">Environmentally conscious delivery by bicycle.</p>
+                    <div class="delivery-features">
+                        <span><i class="fas fa-check"></i> Carbon neutral</span>
+                        <span><i class="fas fa-check"></i> Fresh air delivery</span>
+                        <span><i class="fas fa-check"></i> Sustainable packaging</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="delivery-zones">
+                <h3>Delivery Zones</h3>
+                <div class="delivery-zones-content">
+                    <div class="delivery-zones-visual">
+                        <img src="assets/20250819_2312_Cyberpunk Pizzeria Chef_remix_01k31z7r1xesmrbgb8ax4b8wpp.png" alt="Cyberpunk Delivery Chef" class="delivery-chef-image">
+                    </div>
+                    <div class="zone-grid">
+                        <div class="zone">
+                            <h4>Zone A</h4>
+                            <p>0-2 km from pizzeria</p>
+                            <div class="zone-fee">Free Delivery</div>
+                        </div>
+                        <div class="zone">
+                            <h4>Zone B</h4>
+                            <p>2-5 km from pizzeria</p>
+                            <div class="zone-fee">₪5 Delivery Fee</div>
+                        </div>
+                        <div class="zone">
+                            <h4>Zone C</h4>
+                            <p>5-8 km from pizzeria</p>
+                            <div class="zone-fee">₪10 Delivery Fee</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>In the neon-lit streets of Yavne, where corporate food chains dominate every corner, Pizza Moshe stands as a beacon of hope. Founded by a group of culinary rebels who refused to bow to the processed food industry, we've been serving real pizza to real people since day one.</p>
+                    <p>Our secret? We actually care about what goes into your food. No artificial preservatives, no corporate shortcuts, just honest ingredients and the skill of chefs who remember what real cooking tastes like.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Years of Rebellion</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Corporate Masters</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Cyberpunk Riders</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <img src="assets/20250819_2302_Cyberpunk Pizza Chef_remix_01k31ynbx9e67aj10w7kdbaqxv.png" alt="Chef in Cyberpunk Kitchen" class="about-chef-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <p class="section-subtitle">Join the resistance. One pizza at a time.</p>
+            
+            <div class="order-form">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="delivery-type">Delivery Type</label>
+                            <select id="delivery-type" name="delivery-type" required>
+                                <option value="">Choose delivery speed...</option>
+                                <option value="standard">Standard (30-45 min)</option>
+                                <option value="express">Express (15-25 min)</option>
+                                <option value="eco">Eco (40-55 min)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment">Payment Method</label>
+                            <select id="payment" name="payment" required>
+                                <option value="">Choose payment...</option>
+                                <option value="cash">Cash on Delivery</option>
+                                <option value="card">Card on Delivery</option>
+                                <option value="crypto">Cryptocurrency</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pizza-type">Pizza Type</label>
+                        <select id="pizza-type" name="pizza-type" required>
+                            <option value="">Choose your rebellion...</option>
+                            <option value="margherita">Classic Margherita</option>
+                            <option value="pepperoni">Pepperoni Rebellion</option>
+                            <option value="veggie">Veggie Liberation</option>
+                            <option value="supreme">Supreme Resistance</option>
+                            <option value="bbq-chicken">BBQ Chicken Uprising</option>
+                            <option value="mediterranean">Mediterranean Dream</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Special Instructions</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Tell us how you want your pizza..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Order Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>123 Cyberpunk Street, Yavne, Israel</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+972-50-123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Sun-Thu: 11:00 AM - 11:00 PM<br>Fri-Sat: 12:00 PM - 12:00 AM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-motorcycle"></i>
+                        <div>
+                            <h3>Delivery Hours</h3>
+                            <p>Sun-Thu: 11:00 AM - 10:30 PM<br>Fri-Sat: 12:00 PM - 11:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-visual">
+                    <div class="contact-chef-image">
+                        <img src="assets/ChatGPT Image Aug 19, 2025, 11_13_06 PM.png" alt="Cyberpunk Chef Contact" class="contact-chef-img">
+                    </div>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Interactive Delivery Map</p>
+                        <div class="delivery-radius">
+                            <div class="radius-circle zone-a"></div>
+                            <div class="radius-circle zone-b"></div>
+                            <div class="radius-circle zone-c"></div>
+                            <div class="restaurant-marker">🍕</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-text">PIZZA MOSHE</div>
+                    <div class="logo-subtitle">YAVNE</div>
+                </div>
+                <div class="footer-message">
+                    <p>Fighting corporate food, one slice at a time.</p>
+                    <p>&copy; 2025 Pizza Moshe Yavne. No corporate overlords allowed.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
