@@ -120,11 +120,32 @@ body::after {
 
 .logo {
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-stack {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.logo-image {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px var(--neon-orange));
 }
 
 .logo-text {
     font-family: 'Orbitron', monospace;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 900;
     color: var(--neon-orange);
     text-shadow: 0 0 10px var(--neon-orange);
@@ -133,14 +154,14 @@ body::after {
 
 .logo-subtitle {
     font-family: 'Orbitron', monospace;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--neon-blue);
     text-shadow: 0 0 8px var(--neon-blue);
     letter-spacing: 1px;
 }
 
 .logo-tagline {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--text-gray);
     margin-top: 2px;
 }
