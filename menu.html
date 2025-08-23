@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Pizza Moshe Yavne</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="assets/logo.png" alt="Pizza Moshe Logo" class="logo-img">
+                </div>
+                <div class="logo-stack">
+                    <div class="logo-text">PIZZA MOSHE</div>
+                    <div class="logo-subtitle">YAVNE</div>
+                    <div class="logo-tagline">THE MOST ADVANCED PIZZA IN THE WORLD</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="section-title">The Menu</h2>
+            <p class="section-subtitle">No corporate recipes. Just good food.</p>
+            
+            <!-- Menu Categories -->
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="pizzas">Pizzas</button>
+                <button class="category-btn" data-category="sides">Sides</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+            </div>
+            
+            <!-- Pizzas Category -->
+            <div class="menu-category active" id="pizzas">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Popular</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Classic Margherita</h3>
+                            <p>Fresh mozzarella, basil, and our secret sauce. Simple. Perfect. Real.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Mozzarella, Basil, Tomato Sauce</span>
+                                <span class="spice-level">🌶️ Mild</span>
+                            </div>
+                            <div class="price">₪45</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Spicy</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Pepperoni Rebellion</h3>
+                            <p>Spicy pepperoni, mozzarella, and a middle finger to bland corporate pizza.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Pepperoni, Mozzarella, Spicy Sauce</span>
+                                <span class="spice-level">🌶️🌶️🌶️ Hot</span>
+                            </div>
+                            <div class="price">₪52</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Vegan</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Veggie Liberation</h3>
+                            <p>Fresh vegetables, no artificial preservatives, and maximum flavor.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Bell Peppers, Mushrooms, Onions, Olives</span>
+                                <span class="spice-level">🌶️ Mild</span>
+                            </div>
+                            <div class="price">₪48</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Premium</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Supreme Resistance</h3>
+                            <p>Everything on it. Because sometimes you need to go all out.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Pepperoni, Sausage, Mushrooms, Peppers, Onions, Olives</span>
+                                <span class="spice-level">🌶️🌶️ Medium</span>
+                            </div>
+                            <div class="price">₪65</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">New</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>BBQ Chicken Uprising</h3>
+                            <p>Grilled chicken, red onions, and our homemade BBQ sauce.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Chicken, Red Onions, BBQ Sauce, Mozzarella</span>
+                                <span class="spice-level">🌶️🌶️ Medium</span>
+                            </div>
+                            <div class="price">₪58</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                            <div class="menu-badge">Chef's Choice</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Mediterranean Dream</h3>
+                            <p>Feta cheese, sun-dried tomatoes, artichokes, and kalamata olives.</p>
+                            <div class="menu-item-details">
+                                <span class="ingredients">Feta, Sun-dried Tomatoes, Artichokes, Kalamata Olives</span>
+                                <span class="spice-level">🌶️ Mild</span>
+                            </div>
+                            <div class="price">₪55</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sides Category -->
+            <div class="menu-category" id="sides">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Garlic Bread Revolution</h3>
+                            <p>Fresh baked bread with garlic butter and herbs.</p>
+                            <div class="price">₪18</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Buffalo Wings Resistance</h3>
+                            <p>Spicy buffalo wings with blue cheese dip.</p>
+                            <div class="price">₪32</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Drinks Category -->
+            <div class="menu-category" id="drinks">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Fresh Lemonade</h3>
+                            <p>Homemade lemonade with real lemons.</p>
+                            <div class="price">₪15</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Iced Tea</h3>
+                            <p>Refreshing iced tea with mint.</p>
+                            <div class="price">₪12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desserts Category -->
+            <div class="menu-category" id="desserts">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Tiramisu</h3>
+                            <p>Classic Italian dessert with coffee and mascarpone.</p>
+                            <div class="price">₪25</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-text">PIZZA MOSHE</div>
+                    <div class="logo-subtitle">YAVNE</div>
+                </div>
+                <div class="footer-message">
+                    <p>Fighting corporate food, one slice at a time.</p>
+                    <p>&copy; 2025 Pizza Moshe Yavne. No corporate overlords allowed.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
